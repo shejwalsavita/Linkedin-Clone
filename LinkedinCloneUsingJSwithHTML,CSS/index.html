@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/style.css">
+    <title>Linkedin-Clone</title>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-left">
+            <a href="index.html" class="logo-img"><img src="images copy/logo.png"></a>
+             <div class="search-box">
+                <img src="images copy/search.png"><input type="text" placeholder="Search">
+            </div>
+        </div>
+        <div class="nav-center">
+            <ul class="navmenu">
+                <li><a href="#" class="active"><img src="images copy/home.png"><span>Home</span></a></li>
+                <li><a href="#"><img src="images copy/network.png"><span>My Network</span></a></li>
+                <li><a href="#"><img src="images copy/jobs.png"><span>Jobs</span></a></li> 
+                <li><a href="#"><img src="images copy/message.png"><span>Messaging</span></a></li>
+                <li><a href="#"><img src="images copy/notification.png"><span>Notifications</span></a></li>
+            </ul>
+        </div>
+        <div class="nav-right">
+            <div class="online">
+                <img src="images copy/user-1.png" class="nav-profile-img" onclick="toggleMenu()">
+            </div>    
+        </div>
+        <!----------------------profile-Drop-Down-menut--------------------------------->
+        <div class="profile-menu-wrap" id="profileMenu">
+              <div  class="profile-menu">
+                   <div class="user-info">
+                       <img src="images copy/user-1.png">
+                       <div>
+                           <h3>Rayan Walton</h3>
+                           <a href="profile.html">See you profile</a>
+                       </div>
+                   </div>
+                   <hr>
+                   <a href="#" class="profile-menu-link">
+                       <img src="images copy/feedback.png">
+                        <p>Give Feedback</p>
+                        <span>></span>
+                   </a>
+                   <a href="#" class="profile-menu-link">
+                        <img src="images copy/setting.png">
+                        <p>Setting & Privacy</p>
+                        <span>></span>
+                   </a>
+                   <a href="#" class="profile-menu-link">
+                        <img src="images copy/help.png">
+                        <p>Help & Support</p>
+                        <span>></span>
+                  </a>
+                  <a href="#" class="profile-menu-link">
+                        <img src="images copy/display.png">
+                        <p>Dispaly & Accessibility</p>
+                        <span>></span>
+                  </a>
+                  <a href="#" class="profile-menu-link">
+                        <img src="images copy/logout.png">
+                        <p>Logout</p>
+                        <span>></span>
+                 </a>
+              </div>
+        </div>
+    </nav>   
+
+ <!---------------------------------------navbar close-------------------------------------->  
+ 
+    <div class="container">
+        <!-----------------------------left-sidebar------------------------------------>
+        <div class="left-sidebar">
+            <div class="sidebar-profile-box">
+                <img src="images copy/cover-pic.png" width="100%">
+                <div class="sidebar-profile-info">
+                    <img src="images copy/user-1.png">
+                    <h1>Rayan Walton</h1>
+                    <h3>Web Developer at Microsoft</h3>
+                    <ul>
+                        <li>Your profile views<span>52</span></li>
+                        <li>Your post views<span>810</span></li>
+                        <li>Your connections<span>205</span></li>
+                    </ul>
+                </div>
+                <div class="sidebar-profile-link">
+                     <a href="#"><img src="images copy/items.png">My items</a>
+                     <a href="#"><img src="images copy/premium.png">Try premium</a>
+                </div>    
+            </div>
+            <div class="sidebar-activity" id="sidebarActivity">
+                 <h3>RECENT</h3>
+                 <a href="#"><img src="images copy/recent.png">web Development</a>
+                 <a href="#"><img src="images copy/recent.png">User Inetrface</a>
+                 <a href="#"><img src="images copy/recent.png">Online Learning</a>
+                 <a href="#"><img src="images copy/recent.png">Learn Online</a>
+                 <a href="#"><img src="images copy/recent.png">Code Better</a>
+                 <a href="#"><img src="images copy/recent.png">Group Learning</a>
+                 <h3>GROUPS</h3>
+                 <a href="#"><img src="images copy/group.png">web Web Design Group</a>
+                 <a href="#"><img src="images copy/group.png">HTML & CSS Learners</a>
+                 <a href="#"><img src="images copy/group.png">Python & Javascript</a>
+                 <a href="#"><img src="images copy/group.png">Learn Coding Online</a>
+                 <h3>HASHTAG</h3>
+                 <a href="#"><img src="images copy/hashtag.png">webdevelopment</a>  
+                 <a href="#"><img src="images copy/hashtag.png">Userinetrface</a> 
+                 <a href="#"><img src="images copy/hashtag.png">Onlinelearning</a> 
+                 <div class="discover-more-link">
+                    <a href="#">Discover more</a> 
+                 </div>
+            </div> 
+
+            <p id="ShowMoreLink" onclick="toggleActivity()">Show more<b>+</b></p>
+        </div>
+
+        <!-----------------------------main-content------------------------------------>
+        <div class="main-content">
+
+            <div class="create-post">
+                <div class="create-post-input">
+                    <img src="images copy/user-1.png">
+                    <textarea rows="2"placeholder="write a post"></textarea>
+                </div>
+                <div class="create-post-links">
+                     <li><img src="images copy/photo.png">Photo</li>
+                     <li><img src="images copy/video.png">Video</li>
+                     <li><img src="images copy/event.png">Event</li>
+                     <li>Post</li>
+                </div>
+            </div>
+
+            <div class="sort-by">
+                <hr>
+                <p>Sort by: <span>Top<img src="images copy/down-arrow.png"><span></p>
+            </div>
+            
+            <div class="post">
+                <div class="post-author">
+                     <img src="images copy/user-3.png"> 
+                     <div>
+                         <h1>Benjamin Leo</h1>
+                         <small>Founder and CEO at Gellelio Group | Angle Investor</small>
+                         <small>2 hours ago</small>
+                     </div>
+                </div>
+                <p>The success of every websites depends on search engine optimization and digital marketing strategy . 
+                If  you are on first page of all major search engines  then you are ahead among your competitors .</p>
+                <img src="images copy/post-image-1.png" width="100%">
+                <div class="post-status">
+                    <div>
+                         <img src="images copy/thumbsup.png">
+                         <img src="images copy/love.png">
+                         <img src="images copy/clap.png">
+                         <span class="liked-users">Abhinav Mishra and 75 others</span>
+                    </div>
+                    <div>
+                         <span>22 comments &middot; 40 shares</span>
+                    </div>
+                </div>
+                <div class="post-activity">
+                      <div>
+                          <img src="images copy/user-1.png" class="post-activity-user-icon">
+                          <img src="images copy/down-arrow.png" class="post-activity-arrow-icon">
+                      </div>
+                      <div class="post-activity-link">
+                           <img src="images copy/like.png">
+                           <span>Like</span>
+                      </div>
+                      <div class="post-activity-link">
+                           <img src="images copy/comment.png">
+                           <span>Comment</span>
+                       </div>
+                       <div class="post-activity-link">
+                            <img src="images copy/share.png">
+                            <span>Share</span>
+                        </div>
+                        <div class="post-activity-link">
+                            <img src="images copy/send.png">
+                            <span>Send</span>
+                        </div>
+                </div>   
+            </div>
+            <div class="post">
+                <div class="post-author">
+                     <img src="images copy/IMG_20231002_225039.jpg"> 
+                     <div>
+                         <h1>Shejwal Savita</h1>
+                         <small>Software Developer - Intern @Cub To King IT Solutions | HTML 5 | CSS 3 | JavaScript</small>
+                         <small>1 hours ago</small>
+                     </div>
+                </div>
+                <p>Cinema modeOff
+                    Nashik Tour || Nashik Tourist Places || Trimbakeshwar Temple || Sula Vineyards || Panchavati
+                    Join me in this Nashik Darshan video where I ll guide you through Nashik s most famous tourist attractions. We ll explore the sacred Trimbakeshwar Temple, discover the historical Sita Gufa, visit the majestic Kalaram Temple, and unwind at the picturesque Sula Vineyard. This video is a must-watch for anyone planning a trip to Nashik. It provides ...
+                </p>
+                <!-- <img src="images copy/post-image-4.png" width="100%"> -->
+                <video controls class="post-video" width=100% height=400px>
+                    <source src="Videos/WhatsApp Video 2025-02-02 at 23.29.41_bf9fc682.mp4" type="video/mp4">
+                </video>
+                <div class="post-status">
+                    <div>
+                         <img src="images copy/thumbsup.png">
+                         <img src="images copy/love.png">
+                         <img src="images copy/clap.png">
+                         <span class="liked-users">Abhinav Mishra and 75 others</span>
+                    </div>
+                    <div>
+                         <span>22 comments &middot; 40 shares</span>
+                    </div>
+                </div>
+                <div class="post-activity">
+                      <div>
+                          <img src="images copy/user-1.png" class="post-activity-user-icon">
+                          <img src="images copy/down-arrow.png" class="post-activity-arrow-icon">
+                      </div>
+                      <div class="post-activity-link">
+                           <img src="images copy/like.png">
+                           <span>Like</span>
+                      </div>
+                      <div class="post-activity-link">
+                           <img src="images copy/comment.png">
+                           <span>Comment</span>
+                       </div>
+                       <div class="post-activity-link">
+                            <img src="images copy/share.png">
+                            <span>Share</span>
+                        </div>
+                        <div class="post-activity-link">
+                            <img src="images copy/send.png">
+                            <span>Send</span>
+                        </div>
+                </div>   
+            </div>
+            <div class="post">
+                <div class="post-author">
+                     <img src="images copy/user-3.png"> 
+                     <div>
+                         <h1>Benjamin Leo</h1>
+                         <small>Founder and CEO at Gellelio Group | Angle Investor</small>
+                         <small>2 hours ago</small>
+                     </div>
+                </div>
+                <p>The success of every websites depends on search engine optimization and digital marketing strategy . 
+                If  you are on first page of all major search engines  then you are ahead among your competitors .</p>
+                <img src="images copy/post-image-2.png" width="100%">
+                <div class="post-status">
+                    <div>
+                         <img src="images copy/thumbsup.png">
+                         <img src="images copy/love.png">
+                         <img src="images copy/clap.png">
+                         <span class="liked-users">Abhinav Mishra and 75 others</span>
+                    </div>
+                    <div>
+                         <span>22 comments &middot; 40 shares</span>
+                    </div>
+                </div>
+                <div class="post-activity">
+                      <div>
+                          <img src="images copy/user-1.png" class="post-activity-user-icon">
+                          <img src="images copy/down-arrow.png" class="post-activity-arrow-icon">
+                      </div>
+                      <div class="post-activity-link">
+                           <img src="images copy/like.png">
+                           <span>Like</span>
+                      </div>
+                      <div class="post-activity-link">
+                           <img src="images copy/comment.png">
+                           <span>Comment</span>
+                       </div>
+                       <div class="post-activity-link">
+                            <img src="images copy/share.png">
+                            <span>Share</span>
+                        </div>
+                        <div class="post-activity-link">
+                            <img src="images copy/send.png">
+                            <span>Send</span>
+                        </div>
+                </div>   
+            </div>
+            <div class="post">
+                <div class="post-author">
+                     <img src="images copy/IMG_20231002_225039.jpg"> 
+                     <div>
+                         <h1>Shejwal Savita</h1>
+                         <small>Software Developer - Intern @Cub To King IT Solutions | HTML 5 | CSS 3 | JavaScript</small>
+                         <small>1 hours ago</small>
+                     </div>
+                </div>
+                <p>🚀 Project Completed! 🚀
+
+                    Today, I completed a Cake Shop Website using HTML, CSS, and Bootstrap on VS Code! 🎂🍰
+                    It was a fantastic learning experience where I improved my front-end development skills and created a responsive, visually appealing website.<br>
+                    
+                    A huge thank you Ravi Prakashrao Patki sir for all the guidance, feedback, and support throughout this project. 🙏 Your mentorship has been invaluable in helping me grow and succeed.<br>
+                    
+                    🔗You can also explore the full project on my GitHub:https://lnkd.in/ga7tnpnC
+                    
+   
+                </p>
+                <!-- <img src="images copy/post-image-4.png" width="100%"> -->
+                <video controls class="post-video" width=100% height=400px>
+                    <source src="Videos/CakeShopResponsiveWebsite - Google Chrome 2025-01-27 15-09-59.mp4" type="video/mp4">
+                </video>
+                <div class="post-status">
+                    <div>
+                         <img src="images copy/thumbsup.png">
+                         <img src="images copy/love.png">
+                         <img src="images copy/clap.png">
+                         <span class="liked-users">Abhinav Mishra and 75 others</span>
+                    </div>
+                    <div>
+                         <span>22 comments &middot; 40 shares</span>
+                    </div>
+                </div>
+                <div class="post-activity">
+                      <div>
+                          <img src="images copy/user-1.png" class="post-activity-user-icon">
+                          <img src="images copy/down-arrow.png" class="post-activity-arrow-icon">
+                      </div>
+                      <div class="post-activity-link">
+                           <img src="images copy/like.png">
+                           <span>Like</span>
+                      </div>
+                      <div class="post-activity-link">
+                           <img src="images copy/comment.png">
+                           <span>Comment</span>
+                       </div>
+                       <div class="post-activity-link">
+                            <img src="images copy/share.png">
+                            <span>Share</span>
+                        </div>
+                        <div class="post-activity-link">
+                            <img src="images copy/send.png">
+                            <span>Send</span>
+                        </div>
+                </div>   
+            </div>
+            <div class="post">
+                <div class="post-author">
+                     <img src="images copy/user-3.png"> 
+                     <div>
+                         <h1>Benjamin Leo</h1>
+                         <small>Founder and CEO at Gellelio Group | Angle Investor</small>
+                         <small>2 hours ago</small>
+                     </div>
+                </div>
+                <p>The success of every websites depends on search engine optimization and digital marketing strategy . 
+                If  you are on first page of all major search engines  then you are ahead among your competitors .</p>
+                <img src="images copy/post-image-3.png" width="100%">
+                <div class="post-status">
+                    <div>
+                         <img src="images copy/thumbsup.png">
+                         <img src="images copy/love.png">
+                         <img src="images copy/clap.png">
+                         <span class="liked-users">Abhinav Mishra and 75 others</span>
+                    </div>
+                    <div>
+                         <span>22 comments &middot; 40 shares</span>
+                    </div>
+                </div>
+                <div class="post-activity">
+                      <div>
+                          <img src="images copy/user-1.png" class="post-activity-user-icon">
+                          <img src="images copy/down-arrow.png" class="post-activity-arrow-icon">
+                      </div>
+                      <div class="post-activity-link">
+                           <img src="images copy/like.png">
+                           <span>Like</span>
+                      </div>
+                      <div class="post-activity-link">
+                           <img src="images copy/comment.png">
+                           <span>Comment</span>
+                       </div>
+                       <div class="post-activity-link">
+                            <img src="images copy/share.png">
+                            <span>Share</span>
+                        </div>
+                        <div class="post-activity-link">
+                            <img src="images copy/send.png">
+                            <span>Send</span>
+                        </div>
+                </div>   
+            </div>
+            <div class="post">
+                <div class="post-author">
+                     <img src="images copy/ravi patki sir.jpg"> 
+                     <div>
+                         <h1>Ravi Prakashrao Patki</h1>
+                         <small>ANGULAR | REACTJS | CORE JAVA | HIBERNATE | SPRING | SPRING BOOT | UML | DESIGN PATTERN | 23K+ Followers | Business Analyst at Sadhana IT Solutions Pvt. Ltd.</small>
+                         <small>4 hours ago</small>
+                     </div>
+                </div>
+                <p>
+                </p>
+                <img src="images copy/WhatsApp Image 2025-02-03 at 09.34.00_1abb0828.jpg" width="100%">
+                <div class="post-status">
+                    <div>
+                         <img src="images copy/thumbsup.png">
+                         <img src="images copy/love.png">
+                         <img src="images copy/clap.png">
+                         <span class="liked-users">Abhinav Mishra and 75 others</span>
+                    </div>
+                    <div>
+                         <span>22 comments &middot; 40 shares</span>
+                    </div>
+                </div>
+                <div class="post-activity">
+                      <div>
+                          <img src="images copy/user-1.png" class="post-activity-user-icon">
+                          <img src="images copy/down-arrow.png" class="post-activity-arrow-icon">
+                      </div>
+                      <div class="post-activity-link">
+                           <img src="images copy/like.png">
+                           <span>Like</span>
+                      </div>
+                      <div class="post-activity-link">
+                           <img src="images copy/comment.png">
+                           <span>Comment</span>
+                       </div>
+                       <div class="post-activity-link">
+                            <img src="images copy/share.png">
+                            <span>Share</span>
+                        </div>
+                        <div class="post-activity-link">
+                            <img src="images copy/send.png">
+                            <span>Send</span>
+                        </div>
+                </div>   
+            </div>
+            <div class="post">
+                <div class="post-author">
+                     <img src="images copy/IMG_20231002_225039.jpg"> 
+                     <div>
+                         <h1>Shejwal Savita</h1>
+                         <small>Software Developer - Intern @Cub To King IT Solutions | HTML 5 | CSS 3 | JavaScript</small>
+                         <small>1 hours ago</small>
+                     </div>
+                </div>
+                <p>🎹 Excited to share my latest project: A Piano app created using HTML, CSS, and JavaScript! 🎶<br>
+                    After a lot of coding and experimentation, I’ve built a fully functional piano app that can be played directly in your browser! This was a fun and challenging project that helped me dive deeper into web development.<br>
+                    
+                    I want to give a huge THANK YOU to my amazing mentor, Ravi Prakashrao Patki, for their guidance, support, and encouragement throughout this journey. 🙏<br>
+                    
+                    Check out the app below!👇<br>
+                    
+                    Feel free to check out my Github : https://lnkd.in/g3EbcPNV
+                
+                </p>
+                <video controls class="post-video" width=100% height=400px>
+                    <source src="Videos/Piano - Google Chrome 2025-01-25 17-19-04.mp4" type="video/mp4">
+                </video>
+                <div class="post-status">
+                    <div>
+                         <img src="images copy/thumbsup.png">
+                         <img src="images copy/love.png">
+                         <img src="images copy/clap.png">
+                         <span class="liked-users">Abhinav Mishra and 75 others</span>
+                    </div>
+                    <div>
+                         <span>22 comments &middot; 40 shares</span>
+                    </div>
+                </div>
+                <div class="post-activity">
+                      <div>
+                          <img src="images copy/user-1.png" class="post-activity-user-icon">
+                          <img src="images copy/down-arrow.png" class="post-activity-arrow-icon">
+                      </div>
+                      <div class="post-activity-link">
+                           <img src="images copy/like.png">
+                           <span>Like</span>
+                      </div>
+                      <div class="post-activity-link">
+                           <img src="images copy/comment.png">
+                           <span>Comment</span>
+                       </div>
+                       <div class="post-activity-link">
+                            <img src="images copy/share.png">
+                            <span>Share</span>
+                        </div>
+                        <div class="post-activity-link">
+                            <img src="images copy/send.png">
+                            <span>Send</span>
+                        </div>
+                </div>   
+            </div>
+           
+        </div>
+
+
+        <!-----------------------------right-sidebar---------------------------------->
+        <div class="right-sidebar">
+            <div class="sidebar-news">
+                    <img src="images copy/more.png" class="info-icon">
+                    <h3>Trending News</h3>
+                    <a href="#">High demand for skilled manpower</a> 
+                    <span>1d ago &middot; 10,934 readers</span>
+
+                    <a href="#">Careers growing horizontally too</a> 
+                    <span>19thd ago &middot; 1,552 readers</span>
+
+                    <a href="#">Less work visa for us, more for UK</a> 
+                    <span>1d ago &middot; 27,290 readers</span>
+
+                    <a href="#">More hiring = higher confidence?</a> 
+                    <span>18th ago &middot; 8,934 readers</span>
+
+                    <a href="#">Gautam Adani is the worl'd third richest</a> 
+                    <span>12th ago &middot; 4,205 readers</span>
+
+                    <a href="#"class="read-more-link">Read More</a>
+             </div>
+
+            <div class="sidebar-ad">
+                <small>Ad &middot;&middot;&middot;</small>
+                <p>Master the 5 principles of web design</p>
+                <div>
+                    <img src="images copy/user-1.png">
+                    <img src="images copy/mi-logo.png"> 
+                </div>   
+                <b>Brand and Demand in Xiaomi</b>   
+                <a href="#"class="ad-link">Learn More</a>
+            </div>
+            <div class="sidebar-useful-links">
+                 <a href="#">Home</a>
+                 <a href="#">Accessibility</a>
+                 <a href="#">Help Center</a>
+                 <a href="#">Privacy Policy</a>
+                 <a href="#">Advertising</a>
+                 <a href="#">Get the App</a>
+                 <a href="#">More</a>
+
+                 <div class="copyright-msg">
+                     <img src="images copy/logo.png">
+                     <p>Linkedup &#169; 2022. All right reserved</p>
+                 </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="script.js">     
+    </script>
+
+</body>
+</html>
+
